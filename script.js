@@ -152,35 +152,10 @@ modalImg.addEventListener('dblclick', () => {
   modalImg.style.transform = `scale(1)`;
 });
 
-document.addEventListener("scroll", () => {
-  const bg = document.querySelector("#productos .parallax-bg");
-  const rect = bg.parentElement.getBoundingClientRect();
-  const amount = rect.top * 0.3; // velocidad del parallax
-  bg.style.transform = `translateY(${amount}px)`;
-});
-// BOTON "Marcas"
-document.querySelectorAll('.cta')[1].addEventListener('click', () => {
-
-  const todos = document.querySelectorAll('.productos-container .producto');
-  const marcas = document.querySelectorAll('#marcas .producto');
-
-  todos.forEach(p => p.style.display = "none"); 
-  marcas.forEach(p => p.style.display = "block");
-
-  document.querySelector('#marcas').scrollIntoView({ behavior:'smooth' });
-});
-
-// BOTON "Mooner Street" (muestra todo otra vez)
-document.querySelectorAll('.cta')[0].addEventListener('click', () => {
-
-  const todos = document.querySelectorAll('.productos-container .producto');
-  todos.forEach(p => p.style.display = "block");
-
-  document.querySelector('#productos').scrollIntoView({ behavior:'smooth' });
-});
 
 
 </script>
+
 
 
 
