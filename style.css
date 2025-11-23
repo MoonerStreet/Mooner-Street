@@ -424,4 +424,11 @@ footer { padding: 18px; text-align:center; color: #666; background: #fff; border
   gap: 20px;
 }
 
+.producto {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
 
