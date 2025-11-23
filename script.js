@@ -147,33 +147,11 @@ modalImg.addEventListener('mousemove', e => {
   modalImg.style.transform = `translate(${walkX}px, ${walkY}px) scale(1.7)`; 
 });
 
-// BOTÓN MOONER STREET (mostrar todo)
-document.querySelectorAll('.cta')[0].addEventListener('click', () => {
-    const todos = document.querySelectorAll('.producto');
-    todos.forEach(p => p.style.display = 'block');
-});
-
-
-// BOTÓN MARCAS (solo mostrar los 2 de #marcas)
-document.querySelectorAll('.cta')[1].addEventListener('click', () => {
-
-    const todos = document.querySelectorAll('.producto'); 
-    const marcas = document.querySelectorAll('#marcas .producto');
-
-    // Ocultar todos los productos
-    todos.forEach(p => p.style.display = 'none');
-
-    // Mostrar solo los de marcas
-    marcas.forEach(p => p.style.display = 'block');
-
-    // IMPORTANTE: asegurar que el contenedor #marcas siga visible
-    document.querySelector('#marcas').style.display = 'block';
-});
-
 
 
 
 </script>
+
 
 
 
