@@ -159,5 +159,24 @@ document.addEventListener("scroll", () => {
   bg.style.transform = `translateY(${amount}px)`;
 });
 
+<script>
+
+document.querySelector('.cta:nth-child(2)').addEventListener('click', function() {
+  
+  
+  const todos = document.querySelectorAll('.producto');
+  
+  
+  const soloMarcas = document.querySelectorAll('#marcas .producto');
+
+ 
+  todos.forEach(p => p.style.display = "none");
+
+ 
+  soloMarcas.forEach(p => p.style.display = "block");
+});
+</script>
+
+
 
 
