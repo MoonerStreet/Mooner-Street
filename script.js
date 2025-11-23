@@ -146,19 +146,3 @@ modalImg.addEventListener('mousemove', e => {
   const walkY = y - startY;
   modalImg.style.transform = `translate(${walkX}px, ${walkY}px) scale(1.7)`; 
 });
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
