@@ -182,16 +182,15 @@ button:active, .btn-buy:active, .cta:active { transform: scale(0.97); transition
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: image-set(
-    url('grafiti2.jpg') 1x,
-    url('grafiti2@2x.jpg') 2x,
-    url('grafiti2@3x.jpg') 3x
-  );
-  background-size: cover;
-  background-position: center;
+  width: 100%;      /* Imagen en todo el ancho */
+  height: 100%;     /* Imagen en toda la altura del contenedor */
+  
+  background-image: url("grafiti2.jpg");
+  background-size: cover;          /* Evita pixelación al escalar */
+  background-position: center;     /* Centra la imagen */
   background-repeat: no-repeat;
+  background-attachment: fixed;    /* (Opcional) Parallax suave */
+
   will-change: transform;
 }
 
