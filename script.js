@@ -171,11 +171,10 @@ document.querySelectorAll('.cta')[1].addEventListener('click', () => {
 });
 
 
-});
-
 
 
 </script>
+
 
 
 
