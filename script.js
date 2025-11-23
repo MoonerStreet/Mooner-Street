@@ -147,35 +147,36 @@ modalImg.addEventListener('mousemove', e => {
   modalImg.style.transform = `translate(${walkX}px, ${walkY}px) scale(1.7)`; 
 });
 
-// Doble click para volver a normal
-modalImg.addEventListener('dblclick', () => {
-  modalImg.style.transform = `scale(1)`;
-});
-// BOTÓN MARCAS
-document.querySelector('.cta:nth-child(2)').addEventListener('click', () => {
-
-  const todos = document.querySelectorAll('.producto'); // todos los productos del sitio
-  const marcas = document.querySelectorAll('#marcas .producto'); // solo los de marcas
-
-  // ocultar todos
-  todos.forEach(p => p.style.display = "none");
-
-  // mostrar solo los dos del div #marcas
-  marcas.forEach(p => p.style.display = "block");
+// BOTÓN MOONER STREET (mostrar todo)
+document.querySelectorAll('.cta')[0].addEventListener('click', () => {
+    const todos = document.querySelectorAll('.producto');
+    todos.forEach(p => p.style.display = 'block');
 });
 
 
-// BOTÓN MOONER STREET (mostrar todo otra vez)
-document.querySelector('.cta:nth-child(1)').addEventListener('click', () => {
+// BOTÓN MARCAS (solo mostrar los 2 de #marcas)
+document.querySelectorAll('.cta')[1].addEventListener('click', () => {
 
-  const todos = document.querySelectorAll('.producto');
-  todos.forEach(p => p.style.display = "block");
+    const todos = document.querySelectorAll('.producto'); 
+    const marcas = document.querySelectorAll('#marcas .producto');
+
+    // Ocultar todos los productos
+    todos.forEach(p => p.style.display = 'none');
+
+    // Mostrar solo los de marcas
+    marcas.forEach(p => p.style.display = 'block');
+
+    // IMPORTANTE: asegurar que el contenedor #marcas siga visible
+    document.querySelector('#marcas').style.display = 'block';
+});
+
 
 });
 
 
 
 </script>
+
 
 
 
